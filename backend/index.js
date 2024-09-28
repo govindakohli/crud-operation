@@ -11,7 +11,7 @@ app.use(express.json())
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/batch10am');
+  await mongoose.connect('mongodb://127.0.0.1:27017/batch10am').then(()=>console.log("MongoDB connected Succesfully "))
 }
 
 
